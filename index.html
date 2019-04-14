@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link " href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link " href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text"><a data-toggle="modal" data-target="#loginmodal" role="button"><span class="fa fa-sign-in fa-lg"></span>Login</a></span>
+                <span class="navbar-text"><a id="loginButton"  role="button"><span class="fa fa-sign-in fa-lg"></span>Login</a></span>
             </div>
 
             
@@ -135,7 +135,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-target="#ReserveModal" data-toggle="modal"  class="btn btn-warning btn-md btn-block" role="button"  >Reserve Table</a>
+                    <a id="ReservationButton"  class="btn btn-warning btn-md btn-block" role="button"  >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -360,6 +360,14 @@
                     $(this).children("span").addClass("fa-pause")
                 }
             });
+            // loginModal Toggle using javascript
+            $("#loginButton").click(function(){
+                $("#loginmodal").modal('toggle')
+            })
+
+            $("#ReservationButton").click(function(){
+                $("#ReserveModal").modal('toggle')
+            })
             
         });
     </script>
